@@ -1,0 +1,20 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  name      String
+  uid       String   @unique
+  id        String   @id @unique @default(uuid()) @db.Uuid
+  auth0id   String   @unique()
+  createdAt DateTime @default(now())
+}
