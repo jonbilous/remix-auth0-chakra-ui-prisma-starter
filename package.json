@@ -4,7 +4,9 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "prisma": "npx prisma generate && npx prisma migrate deploy",
+    "vercel": "npm run prisma && npm run build"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.7",
