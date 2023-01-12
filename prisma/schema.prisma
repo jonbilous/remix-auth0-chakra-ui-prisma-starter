@@ -13,7 +13,6 @@ datasource db {
 
 model User {
   name      String
-  uid       String   @unique
   id        String   @id @unique @default(uuid()) @db.Uuid
   auth0id   String   @unique()
   createdAt DateTime @default(now())
