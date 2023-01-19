@@ -12,8 +12,8 @@ export default function Index() {
       <Contained>
         <Button
           onClick={async () => {
-            fetchAction<HelloWorld>("/api/hello", { hello: false }).then(
-              (res) => toast({ title: res.message })
+            fetchAction<HelloWorld>("/api/hello", { hello: true }).then((res) =>
+              toast({ title: res.message })
             );
           }}
         >

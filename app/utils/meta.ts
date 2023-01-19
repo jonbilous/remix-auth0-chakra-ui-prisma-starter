@@ -1,3 +1,5 @@
+import brand from "brand";
+
 export const title = (title: string) => {
-  return [title, "Moodyboards"].join(" | ");
+  return [title, brand.name].join(" | ");
 };
