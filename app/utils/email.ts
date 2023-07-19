@@ -22,7 +22,7 @@ export const sendEmail = async <T extends {}>({
 
   return sendgrid.send({
     to,
-    from: { email: "jon@jonbilous.com", name: brand.name },
+    from: { email: brand.email, name: brand.name },
     subject,
     html,
   });
